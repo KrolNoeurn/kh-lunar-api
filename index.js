@@ -30,10 +30,11 @@ app.get("/", (req, res) => {
   // };
 
   // logger.info("Khmer Lunar Date:", { structuredData: true, date.toLunarDate('ថ្ងៃW dN ខែm ឆ្នាំa e ព.ស.b') });
-  res.json(date.toLunarDate('ថ្ងៃW d N ខែm ឆ្នាំa e ព.ស.b'));
+  res.send(date.toLunarDate('ថ្ងៃW d N ខែm ឆ្នាំa e ព.ស.b'));
 });
 // must listen to the port Vercel provides
 app.listen(3000, () => {
   console.log("Server is running on http://localhost:3000");
 });
+
 

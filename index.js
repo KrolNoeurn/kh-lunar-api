@@ -6,12 +6,12 @@ require('@thyrith/momentkh')(moment);
 
 
 // simple API route
-app.get("/", (req, res) => {
-  res.send("Hello from Node.js");
-});
+// app.get("/", (req, res) => {
+//   res.send("Hello from Node.js");
+// });
 
-// Date khmer lunar route
-app.get("/date-khmer-lunar", (req, res) => {
+// Date khmer lunar route /date-khmer-lunar
+app.get("/", (req, res) => {
   // Try to read date from query param (?date=2025-01-01) or request body
   const inputDate = req.query.date || req.body?.date;
 
@@ -36,3 +36,4 @@ app.get("/date-khmer-lunar", (req, res) => {
 app.listen(3000, () => {
   console.log("Server is running on http://localhost:3000");
 });
+

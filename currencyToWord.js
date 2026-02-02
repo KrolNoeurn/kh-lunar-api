@@ -64,7 +64,7 @@ const handleDecimal = (input, currencyName) => {
 
         const result =
             integerPart +
-            `${currencyName}` +
+            `${currencyName}` + " " +
             `${AndWord}` +
             `${decimalPart}` +
             CentWord
@@ -74,4 +74,5 @@ const handleDecimal = (input, currencyName) => {
         const num = integerToCurrencyWord(Number(input))
         return `${num}${currencyName}`
     }
+
 }
